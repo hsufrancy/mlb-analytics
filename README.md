@@ -1,5 +1,7 @@
 # ⚾🏟️ MLB Analytics System 
 
+![Web App UI](images/web_app.png)
+
 A full-stack big data application that simulates **real-time MLB game streaming**, performs **historical analytics**, and displays everything on a web dashboard.
 
 **Github Repo**: 
@@ -125,6 +127,7 @@ Row Key Format: <game_id>_<event_number>
 The web app provides:
 
 **4.1 Live Dashboard**
+![Live Games UI](images/live_games.png)
 - Real-time game state
 - Live probability updates
 - Inning + score tracking
@@ -132,17 +135,20 @@ The web app provides:
 **4.2 Historical Analytics**
 
 **Query 1: Team Season Stats**
+![query 1 UI](images/query1.png)
 - Wins / Losses
 - Win percentage
 - Home vs Away performance
 - Runs scored / allowed
 
 **Query 2: Head-to-Head Matchups**
+![query 2 UI](images/query2.png)
 - Team1 vs Team2
 - Win counts
 - Avg runs per game
 
 **Query 3: League Trends**
+![query 3 UI](images/query3.png)
 - Avg runs/game per season
 - Home win rate
 - Close games % (run diff ≤ 1)
