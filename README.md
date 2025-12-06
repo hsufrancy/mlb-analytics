@@ -207,6 +207,6 @@ Francy Hsu
 
 Master’s Student, University of Chicago MPCS
 
-Course: Big Data Application Architecture (MPCS 53014-1)
+Course: MPCS 53014-1 Big Data Application Architecture 
 
 Date: December 2024
