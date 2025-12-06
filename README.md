@@ -4,7 +4,7 @@
 
 A full-stack big data application that simulates **real-time MLB game streaming**, performs **historical analytics**, and displays everything on a web dashboard.
 
-**Github Repo**: 
+**Github Repo**: https://github.com/hsufrancy/mlb-analytics
 
 **Web App**: http://ec2-52-20-203-80.compute-1.amazonaws.com:3025
 
