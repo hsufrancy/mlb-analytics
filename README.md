@@ -44,8 +44,8 @@ This project implements a **Lambda Architecture** using:
                                                ┌───────▼────────┐
                                                │ SERVING LAYER  │
                                                │                │
-                                               │ • Flask API    |
-                                               │ • HBase API    | 
+                                               │ • Flask API    │
+                                               │ • HBase API    │ 
                                                │ • Web Dashboard│
                                                └────────────────┘
 ```
