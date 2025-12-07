@@ -8,7 +8,7 @@ A full-stack big data application that simulates **real-time MLB game streaming*
 
 **Web App**: http://ec2-52-20-203-80.compute-1.amazonaws.com:3025
 
-**Demo Video**: 
+**Demo Video**: https://youtu.be/CgzVTa4DZRo
 
 This project implements a **Lambda Architecture** using:
 
@@ -191,7 +191,46 @@ python3 kafka_producer.py
 curl http://<webserver>:3025/api/teams
 curl http://<webserver>:3025/api/live-games
 curl http://localhost:5001/api/hbase/live-predictions
-``` 
+```
+## Project Structur
+Hadoop Cluster:
+```bash
+mlb_project/
+├── data/
+│   ├── games.csv                          # Raw MLB game-level dataset
+│   └── events.csv                         # Raw MLB play-by-play dataset
+│
+├── scripts/
+│   ├── load_data.py                       # Load CSV → HDFS → Hive ingestion script
+│   │
+│   ├── fix_seasons.py                     # Season cleanup utility
+│   ├── fix_seasons_simple.py              # Simpler version of season cleanup
+│   ├── fix_seasons_from_date.py           # Season fix based on date parsing
+│   │
+│   ├── batch/
+│   │   ├── aggregate_team_stats.py        # Batch job: team-season statistics
+│   │   ├── aggregate_matchup_stats.py     # Batch job: head-to-head stats
+│   │   └── aggregate_league_trends.py     # Batch job: league-wide trends
+│   │
+│   └── stream/
+│       ├── kafka_producer.py              # (duplicate) Kafka real-time producer
+│       ├── spark_streaming.py             # Original version of Spark Streaming job
+│       └── spark_streaming_fixed.py       # Final Spark Streaming job pushing ML results → HBase
+│
+├── hbase_api.py                           # Flask microservice exporting HBase predictions
+│
+└── hbase_api.log                          # Log output from hbase_api service
+```
+Local Computer
+```bash
+mlb_project/
+└── francyhsu_app/
+    ├── app.py
+    ├── images
+    ├── templates/
+    ├── requirements.txt
+    └── static/
+```
 ## Data Flow Summary
 Batch Flow
 ```text
